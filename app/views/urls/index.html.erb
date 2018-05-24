@@ -1,0 +1,9 @@
+<h1>URL Shorty</h1>
+
+<% @urls.each do |url| %>
+<p>
+  <%= link_to url.short, url_path(:id => url.short) %> => <%= url.original  %>
+</p>
+<% end %>
+
+<%= link_to "New URL", new_url_path  %>
